@@ -1,11 +1,18 @@
 fun main() {
 
-    val arrInt: Array<Int> = arrayOf<Int>(10, 20, 30, 40)
-    println(arrInt[3])
-    val arrString: Array<String> = arrayOf<String>("One", "Two", "Three", "Four", "Five")
-    println(arrString[0])
-    val myArray: Array<Any> = arrayOf(1, "bye", false)
-
-    val charArray: CharArray = charArrayOf('a', 'b', 'c')
-
+    val num = Array(4, {i -> i * 2})
+    var array = Array(4, { "$it" })
+    val element = array[1]
+    println(element)
+    array[2] = "Update"
+    println(array[2])
+    val size = array.size
+    println(size)
+    for (element in element) println(element)
+    val found = array.contains(element)
+    println(found)
+    val subArray = array.slice(0 .. 3)
+    subArray.forEach { println(it) }
+    array.sort()
+    array.joinToString()
 }
